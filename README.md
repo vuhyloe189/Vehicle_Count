@@ -7,15 +7,15 @@
  
  # Android
   - Login.
-  - 
+  
  ![image](https://user-images.githubusercontent.com/67329036/122044708-02ae4380-ce07-11eb-8a26-7e55ae43717c.png)
 
- -  Dashboad
- -  
+ -  Dashboad.
+ 
 ![image](https://user-images.githubusercontent.com/67329036/122044809-26718980-ce07-11eb-8c9f-365b4bd1d5be.png)
 
  -  Profile.
- -  
+ 
 ![image](https://user-images.githubusercontent.com/67329036/122044927-486b0c00-ce07-11eb-8379-d13941607aff.png)
 
  # Azure.
