@@ -15,7 +15,7 @@ import com.example.authentication.LoginActivity;
 import com.example.authentication.Models.*;
 
 public class UserLoginClient {
-    public static final String API_BASE_URL = "http://192.168.0.120:9000/";
+    public static final String API_BASE_URL = "http://0.0.0.127:9000/";
 
     public static final String TAG = LoginActivity.class.getSimpleName();
 
