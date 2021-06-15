@@ -24,5 +24,6 @@
 
 # Video demo.
   
-https://user-images.githubusercontent.com/67329036/122045588-21f9a080-ce08-11eb-936a-0a3b465fa7f3.mp4
+![demo](https://user-images.githubusercontent.com/67329036/122048021-fb893480-ce0a-11eb-8040-cc38de015c17.gif)
+
 
