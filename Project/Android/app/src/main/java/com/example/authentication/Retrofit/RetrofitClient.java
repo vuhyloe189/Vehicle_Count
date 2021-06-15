@@ -18,7 +18,7 @@ public class RetrofitClient {
 
     private static Retrofit instance = null;
 
-    public static final String API_BASE_URL = "http://52.237.113.8:9000/";
+    public static final String API_BASE_URL = "http://0.0.0.127:9000/";
 
     public static Retrofit getInstance(){
         if(instance == null){
