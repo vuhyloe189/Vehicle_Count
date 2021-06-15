@@ -27,6 +27,9 @@
 
 # Video demo.
   
-![demo](https://user-images.githubusercontent.com/67329036/122048021-fb893480-ce0a-11eb-8040-cc38de015c17.gif)
+
+https://user-images.githubusercontent.com/67329036/122087892-6d737500-ce2f-11eb-9615-d0f335009919.mp4
+
+
 
 
