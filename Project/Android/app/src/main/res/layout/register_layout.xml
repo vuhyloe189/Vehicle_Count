@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f3"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="140dp"
+                android:layout_height="212dp"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:id="@+id/imghexagon"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/hexagone_top" />
+
+
+            </FrameLayout>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="120dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/hexagone_bottom" />
+
+            <LinearLayout
+                android:layout_marginTop="50dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:paddingTop="125dp"
+                android:layout_marginLeft="36dp"
+                android:layout_marginBottom="90dp"
+                android:orientation="vertical">
+
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:text="SIGN UP"
+                    android:layout_gravity="left"
+                    android:textColor="#fefefe"
+                    android:textSize="31.3sp" />
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.3sp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="40.0dp"
+                    android:textColor="#fefefe"
+                    android:text="User Name"
+                    />
+
+                <com.example.authentication.customfonts.EditText_Poppins_Semi_Bold
+                    android:id="@+id/userNameTextSignIn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/transparent"
+                    android:inputType="textPersonName"
+                    android:maxLines="1"
+                    android:maxLength="10"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#FFFFFF"
+                    android:textCursorDrawable="@drawable/white_cursor_color"
+                    android:textSize="15sp" />
+
+                <View
+                    android:layout_width="263.7dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:background="#f2f2f3"/>
+
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.3sp"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="30dp"
+                    android:text="Email"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <com.example.authentication.customfonts.EditText_Poppins_Semi_Bold
+                        android:id="@+id/emailTextSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="textEmailAddress"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#ffffff"
+                        android:textCursorDrawable="@drawable/white_cursor_color"
+                        android:textSize="15sp"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="263.7dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:background="#f2f2f3"/>
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.3sp"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="30dp"
+                    android:text="Password"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:orientation="horizontal">
+
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/passwordTextSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#ffffff"
+                        android:textCursorDrawable="@drawable/white_cursor_color"
+                        android:textSize="15sp"
+                        app:drawable_hide="@drawable/hide1"
+                        app:drawable_show="@drawable/show"
+                        app:tint_color="#FFFFFF" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="263.7dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:background="#f2f2f3"/>
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="13.3sp"
+                    android:textColor="#fefefe"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="30dp"
+                    android:text="Confirm Password"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="horizontal">
+
+
+                    <com.scottyab.showhidepasswordedittext.ShowHidePasswordEditText
+                        android:id="@+id/rePasswordTextSignIn"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="textPassword"
+                        android:maxLength="16"
+                        android:maxLines="1"
+                        android:textColor="#FFFFFF"
+                        android:textColorHint="#ffffff"
+                        android:textCursorDrawable="@drawable/white_cursor_color"
+                        android:textSize="15sp"
+                        app:drawable_hide="@drawable/hide1"
+                        app:drawable_show="@drawable/show"
+                        app:tint_color="#FFFFFF" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="263.7dp"
+                    android:layout_height="0.5dp"
+                    android:layout_gravity="left"
+                    android:layout_marginTop="3dp"
+                    android:background="#f2f2f3"/>
+
+
+                <com.example.authentication.customfonts.MyTextView_Poppins_Regular
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/loginTextViewSignIn"
+                    android:layout_gravity="right"
+                    android:layout_marginTop="17.3dp"
+                    android:text="Already have an account"
+                    android:textColor="#f2f2f3"
+                    android:textSize="12.3sp" />
+
+
+            </LinearLayout>
+            <FrameLayout
+                android:id="@+id/btnSignIn"
+                android:layout_width="40.7dp"
+                android:layout_height="45.3dp"
+                android:layout_gravity="bottom|right"
+                android:layout_marginRight="27.3dp"
+                android:layout_marginBottom="43.7dp"
+                android:background="@drawable/white_hexagone">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="23dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_baseline_arrow_forward_24"/>
+
+
+            </FrameLayout>
+
+
+        </FrameLayout>
+
+
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

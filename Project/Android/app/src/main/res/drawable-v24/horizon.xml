@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <rotate>
+            <shape
+                android:shape="line"
+                android:useLevel="true">
+                <solid android:color="#87CEFA"
+                    android:type="sweep" />
+            </shape>
+        </rotate>
+    </item>
+</layer-list>

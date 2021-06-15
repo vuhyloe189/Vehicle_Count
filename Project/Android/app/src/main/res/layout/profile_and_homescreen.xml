@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/profileMainActivity"
+    android:background="#F0F8FF">
+
+    <FrameLayout
+        android:id="@+id/profileTittle"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="@drawable/curve_view_top">
+    </FrameLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_below="@id/profileTittle"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        app:cardCornerRadius="360dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-145dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/avatar"/>
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_below="@id/profileTittle"
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:background="@drawable/round"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="-80dp">
+
+        <LinearLayout
+            android:id="@+id/userInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="75dp"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/profileUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/pop_semibold"
+                android:text="NONE"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <TextView
+                android:layout_marginTop="-2dp"
+                android:id="@+id/profileEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/pop_light"
+                android:text="none@gmail.com"
+                android:textColor="@color/dgray"
+                android:textStyle="italic"
+                android:textSize="15.5dp"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"/>
+
+        <LinearLayout
+            android:id="@+id/EmailChange"
+            android:layout_marginTop="40dp"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/account_fragment_profile_person_icon_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/pop_semibold"
+                android:gravity="start"
+                android:text="Email Change"
+                android:textColor="@color/dgray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/phoneChange"
+            android:layout_marginTop="17dp"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_phone_24_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/pop_semibold"
+                android:gravity="start"
+                android:text="Change Phone'Number"
+                android:textColor="@color/dgray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/avatarChange"
+            android:layout_marginTop="17dp"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_baseline_image_24_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/pop_semibold"
+                android:gravity="start"
+                android:text="Avatar Change"
+                android:textColor="@color/dgray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/passwordChange"
+            android:layout_marginTop="17dp"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/account_fragment_profile_security_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/pop_semibold"
+                android:gravity="start"
+                android:text="Change Password"
+                android:textColor="@color/dgray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/moreInformation"
+            android:layout_marginTop="17dp"
+            android:layout_width="290dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_baseline_more_horiz_24_blue" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/pop_semibold"
+                android:gravity="start"
+                android:text="More"
+                android:textColor="@color/dgray"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/profileTittle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="390dp">
+
+        <FrameLayout
+            android:id="@+id/TurnBack"
+            android:layout_marginStart="60dp"
+            android:layout_gravity="center"
+            android:layout_width="60dp"
+            android:layout_height="40dp"
+            android:background="@drawable/round3">
+            <TextView
+                android:layout_width="55dp"
+                android:gravity="center"
+                android:layout_height="wrap_content"
+                android:background="@drawable/ic_baseline_arrow_left_alt_24_blue"/>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/save"
+            android:layout_marginStart="10dp"
+            android:layout_width="225dp"
+            android:layout_height="40dp"
+            android:fontFamily="@font/pop_semibold"
+            android:text="CONFIRM"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:background="@drawable/logout_button"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

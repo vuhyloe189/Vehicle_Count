@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    More-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light"/>
+
+    <style name="AppTheme.ActionBar.Transparent" parent="AppTheme">
+        <item name="colorPrimary">@android:color/holo_blue_light</item>
+    </style>
+
+    <!--    More-->
+
+
+    <style name="CircularDeterminateProgressBar">
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:progressDrawable">@drawable/circle</item>
+    </style>
+
+</resources>

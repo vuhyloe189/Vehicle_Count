@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.authentication">
+
+    <application
+        android:requestLegacyExternalStorage="true"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Authentication"
+        tools:targetApi="n">
+        <activity android:name=".ChangePasswordActivity" android:theme="@style/Theme.AppCompat.DayNight.NoActionBar"/>
+        <activity android:name=".RegisterActivity" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Fragment.Profile" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Fragment.NoneFragment" android:theme="@style/Theme.AppCompat.NoActionBar"/>
+        <activity android:name=".Fragment.Dashboard" android:theme="@style/AppTheme.ActionBar.Transparent">
+
+        </activity>
+        <activity android:name=".Fragment.LineChartLayout"
+            android:theme="@style/Theme.AppCompat.NoActionBar"
+            android:screenOrientation="landscape"/>
+        <activity android:name=".LoginActivity" android:theme="@style/Theme.AppCompat.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+</manifest>

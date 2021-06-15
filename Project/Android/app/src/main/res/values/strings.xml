@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Authentication</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="login_name_hint">Name</string>
+    <string name="login_mobile_number_hint">Mobile Number</string>
+    <string name="Open" translatable="false">Open</string>
+    <string name="Close" translatable="false">Close</string>
+</resources>

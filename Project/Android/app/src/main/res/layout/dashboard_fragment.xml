@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:id="@+id/dashboardMainActivity"
+    tools:context=".Fragment.Dashboard"
+    tools:actionBarNavMode="standard"
+    android:background="@drawable/round">
+
+
+
+<!--    Content-->
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/homescreen_background">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent">
+
+                <LinearLayout
+                    android:background="@android:color/transparent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:scaleType="centerCrop">
+
+                    <!--                stop-->
+
+                    <com.jjoe64.graphview.GraphView
+                        android:id="@+id/dashboardGraphView"
+                        android:layout_width="match_parent"
+                        android:layout_height="220dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:background="@drawable/round"
+                        android:padding="20dp" />
+
+                    <com.wajahatkarim3.easyflipview.EasyFlipView
+                        android:id="@+id/dashboardFlipView"
+                        android:background="@android:color/transparent"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="20dp"
+                        app:flipOnTouch="true"
+                        app:flipEnabled="true"
+                        app:flipDuration="400"
+                        app:flipFrom="right"
+                        app:flipType="horizontal"
+                        app:autoFlipBack="false">
+
+                        <LinearLayout
+                            android:id="@+id/dashboardCardBack"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="@drawable/card_view">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_marginTop="35dp"
+                                android:layout_marginStart="5dp"
+                                app:cardCornerRadius="360dp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@color/pink_white">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/round2"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_baseline_directions_car_24"
+                                    app:cardCornerRadius="360dp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_marginStart="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:paddingTop="3dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="3Hours vehicle volume."
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:gravity="center"
+                                    android:textSize="18dp"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_marginTop="10dp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/dashboardCars3hours"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="10"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:textColor="@color/pink_white"
+                                            android:textSize="50sp"/>
+
+                                        <TextView
+                                            android:id="@+id/color3h"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:text="Cars/3hours"
+                                            android:gravity="center"
+                                            android:textColor="@color/pink_white"
+                                            android:textSize="20sp"/>
+
+                                    </LinearLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ProgressBar
+                                            android:id="@+id/progress_bar_3h"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            tools:progress="20"
+                                            style="@style/CircularDeterminateProgressBar" />
+
+                                        <TextView
+                                            android:id="@+id/text_view_progress_3h"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                            app:layout_constraintBottom_toBottomOf="@+id/progress_bar_3h"
+                                            app:layout_constraintEnd_toEndOf="@+id/progress_bar_3h"
+                                            app:layout_constraintStart_toStartOf="@+id/progress_bar_3h"
+                                            app:layout_constraintTop_toTopOf="@+id/progress_bar_3h"
+                                            android:textColor="#2dc937"
+                                            tools:text="Low" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <!--                Front back-->
+
+                        <LinearLayout
+                            android:id="@+id/dashboardCardFront"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/card_view"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="5dp"
+                                android:layout_marginTop="55dp"
+                                android:background="@color/pink_white"
+                                app:cardCornerRadius="360dp">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:background="@drawable/round2"
+                                    android:padding="5dp"
+                                    android:src="@drawable/ic_baseline_directions_car_24"
+                                    app:cardCornerRadius="360dp" />
+
+                            </androidx.cardview.widget.CardView>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="10dp"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:paddingTop="3dp"
+                                    android:text="Hourly vehicle volume."
+                                    android:textAllCaps="true"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginTop="10dp"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:id="@+id/dashboardCars1hours"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center"
+                                            android:gravity="center"
+                                            android:text="54"
+                                            android:textColor="@color/pink_white"
+                                            android:textSize="50sp" />
+
+                                        <TextView
+                                            android:id="@+id/color1h"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="Cars/hours"
+                                            android:textColor="@color/pink_white"
+                                            android:textSize="20sp" />
+
+                                    </LinearLayout>
+
+                                    <androidx.constraintlayout.widget.ConstraintLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent">
+
+                                        <ProgressBar
+                                            android:id="@+id/progress_bar_1h"
+                                            style="@style/CircularDeterminateProgressBar"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            tools:progress="80" />
+
+                                        <TextView
+                                            android:id="@+id/text_view_progress_1h"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                                            android:textColor="#cc3232"
+                                            app:layout_constraintBottom_toBottomOf="@+id/progress_bar_1h"
+                                            app:layout_constraintEnd_toEndOf="@+id/progress_bar_1h"
+                                            app:layout_constraintStart_toStartOf="@+id/progress_bar_1h"
+                                            app:layout_constraintTop_toTopOf="@+id/progress_bar_1h"
+                                            tools:text="High" />
+
+                                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                                </LinearLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.wajahatkarim3.easyflipview.EasyFlipView>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/dashboardPager"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginEnd="20dp"
+                        android:layout_marginTop="3dp"
+                        android:orientation="vertical"
+                        android:background="@drawable/viewpager_dashboard">
+
+                        <com.google.android.material.tabs.TabLayout
+                            android:id="@+id/dashboardTab"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@android:color/transparent"
+                            app:tabBackground="@android:color/transparent"
+                            app:tabIndicatorColor="#1E90FF"
+                            app:tabSelectedTextColor="#0000FF"
+                            app:tabTextColor="#87CEFA">
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Yesterday" />
+
+                            <com.google.android.material.tabs.TabItem
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Last week" />
+
+                        </com.google.android.material.tabs.TabLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:background="@android:color/transparent">
+
+                            <LinearLayout
+                                android:id="@+id/layoutYesterday"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/card_view"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="The highest level"
+                                    android:textAllCaps="false"
+                                    android:textSize="16sp"
+                                    android:textColor="@android:color/black"/>
+
+                                <TextView
+                                    android:id="@+id/dashboardHighestNumber"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="80"
+                                    android:textSize="50dp"
+                                    android:textColor="@android:color/holo_red_dark"/>
+
+                                <com.google.android.material.progressindicator.LinearProgressIndicator
+                                    android:layout_width="match_parent"
+                                    android:padding="2dp"
+                                    android:layout_height="200dp"
+                                    tools:progress="80"
+                                    android:background="@drawable/horizon"/>
+
+                                <TextView
+                                    android:id="@+id/dashboardWhen"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:text="11:22:33 AM"
+                                    android:textAllCaps="false"
+                                    android:textColor="@android:color/black"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0.5dp"
+                                android:layout_height="100dp"
+                                android:layout_gravity="center"
+                                android:background="@color/black"/>
+
+                            <LinearLayout
+                                android:id="@+id/layoutLastWeek"
+                                android:layout_margin="5dp"
+                                android:background="@drawable/card_view"
+                                android:layout_weight="1"
+                                android:orientation="vertical"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="Average"
+                                    android:textAllCaps="false"
+                                    android:textSize="16sp"
+                                    android:textColor="@android:color/black"/>
+
+                                <TextView
+                                    android:id="@+id/dashboardAverageNumber"
+                                    android:gravity="center"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="55"
+                                    android:textSize="50dp"
+                                    android:textColor="#F9a602"/>
+
+                                <com.google.android.material.progressindicator.LinearProgressIndicator
+                                    android:layout_width="match_parent"
+                                    android:padding="2dp"
+                                    android:layout_height="200dp"
+                                    tools:progress="55"
+                                    android:background="@drawable/horizon"/>
+
+                                <TextView
+                                    android:id="@+id/dashboardLevel"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="10dp"
+                                    android:gravity="center"
+                                    android:text="heavy traffic"
+                                    android:textAllCaps="false"
+                                    android:textColor="#F9a602"
+                                    android:textSize="16sp" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </androidx.core.widget.NestedScrollView>
+<!--    LeftMenu-->
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:foregroundGravity="center"
+        android:fitsSystemWindows="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@android:color/white">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:background="#1566e0"
+                android:padding="10dp">
+
+
+                <ImageView
+                    android:id="@+id/card"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="85dp"
+                    android:layout_marginBottom="5dp"
+                    android:background="@drawable/logo">
+
+
+                </ImageView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@id/card"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginTop="18dp"
+                    android:layout_toRightOf="@id/card"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingStart="5dp">
+
+                    <TextView
+                        android:id="@+id/dashboardUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Hello Huy"
+                        android:font="@font/pop_semibold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white"
+                        android:textSize="35sp" />
+
+                    <TextView
+                        android:layout_marginStart="5dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:gravity="left"
+                        android:text="What do you want today ?"
+                        android:font="@font/pop_light"
+                        android:textAllCaps="false"
+                        android:textStyle="italic"
+                        android:textColor="@android:color/darker_gray"
+                        android:textSize="12sp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:id="@+id/dashboardProfileOnTouch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/account_fragment_profile_person_icon" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:gravity="start"
+                        android:text="Profile"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_history_24" />
+
+                    <TextView
+                        android:id="@+id/dashboardHistoryOnTouch"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:gravity="start"
+                        android:text="History"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="25dp"-->
+<!--                    android:orientation="horizontal">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:background="@drawable/account_fragment_profile_security" />-->
+
+<!--                    <TextView-->
+<!--                        android:id="@+id/dashboardSecurityOnTouch"-->
+<!--                        android:layout_width="match_parent"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_gravity="center"-->
+<!--                        android:layout_marginStart="5dp"-->
+<!--                        android:gravity="start"-->
+<!--                        android:text="Change Password"-->
+<!--                        android:textColor="@color/black"-->
+<!--                        android:textSize="18sp" />-->
+
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_baseline_read_more_24" />
+
+                    <TextView
+                        android:id="@+id/dashboardMore"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="5dp"
+                        android:gravity="start"
+                        android:text="More Information"
+                        android:textColor="@color/black"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/dashboardLogout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:text="Logout"
+                android:textColor="#1566e0"
+                android:textSize="22sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
